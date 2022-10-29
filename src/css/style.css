@@ -1,77 +1,100 @@
-header {
-    width: 100%;
+:root {
+    --cor-um: #ffffff;
+    --cor-dois: #5BC241;
+    --cor-tres: #000000;
+    --cor-quatro: #4aa134;
 }
 
 .cabecalho {
     display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-    max-width: 100%;
-}
-
-div {
+    justify-content: space-between;
     padding: 45px;
-    background-color: blue;
-    margin: 20px;
-    max-width: 200px;
-    height: 100px;
+    flex-wrap: wrap;
 }
 
 .marca {
     display: flex;
     align-items: center;
-    padding: 25px;
+    padding: 10px;
 }
 
 h2 {
     padding-left: 5px;
+    font-weight: 800;
+    font-size: 20px;
 }
 
-
-.opcoes {
-    padding: 45px;
-    flex-wrap: wrap;
-    flex-shrink: 1;
-    margin: 20px;
-    max-width: 100%;
-}
-
-ul {
+.opcoes{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    background-color: aqua;
+    padding: 10px;
 }
 
 .opcoes li {
     display: inline-block;
-    padding: 15px;
+    text-align: center;
+    /* padding: 5px; */
 }
 
 a {
-    color: black;
-    max-width: 100%;
-}
-
-.sobre {
-    color: #ffffff;
-}
-
-.opcoes a {
+    padding: 10px 15px;
+    color: var(--cor-tres);
     text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
 }
 
-li:nth-child(2) {
-    background-color: #5BC241;
+a:hover {
+    color: var(--cor-um);
+    padding: 10px 15px;
+    /* border-radius: 5px; */
+    background-color: var(--cor-dois);
 }
 
 button {
-    min-width: 100%;
-    background-color: #5BC241;
-    padding: 15px 25px;
+    background-color: var(--cor-dois);
+    color: var(--cor-um);
+    padding: 10px 21px;
     border: 0;
-    border-radius: 10px;
-    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+a:active {
+    background-color: var(--cor-quatro);
+}
+
+button:active {
+    background-color: var(--cor-quatro);
+}
+
+@media (max-width: 780px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .cabecalho {
+        display: flex;
+        flex-direction: column;
+        padding: 45px;
+        flex-wrap: wrap;
+    }
+
+    .opcoes ul{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .opcoes li {
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+        margin: 2px;
+    }
 }
