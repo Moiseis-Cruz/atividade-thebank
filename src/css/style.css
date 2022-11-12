@@ -32,7 +32,6 @@ h2 {
 .opcoes li {
     display: inline-block;
     text-align: center;
-    /* padding: 5px; */
 }
 
 a {
@@ -46,7 +45,6 @@ a {
 a:hover {
     color: var(--cor-um);
     padding: 10px 15px;
-    /* border-radius: 5px; */
     background-color: var(--cor-dois);
 }
 
