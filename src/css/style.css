@@ -40,7 +40,7 @@ a {
     color: var(--cor-tres);
     text-decoration: none;
     font-size: 15px;
-    font-weight: 400;
+    transition: 0.3s;
 }
 
 a:hover {
